@@ -13,8 +13,9 @@ function printDiff(t1,t2) {
     document.getElementById("diff").value = "";
     var countLine1 = 0;
     var countLine2 = 0;
-    console.log("In Print Difference");
-    
+    //console.log("In Print Difference");
+    var input = document.getElementById("input").value;
+    const inputs= input.split('\n');
     const textL = t1.split('\n');
     const textR = t2.split('\n');
     console.log(textL.length);
@@ -22,8 +23,8 @@ function printDiff(t1,t2) {
 
     for(i= 0,j=0; i<textL.length &&j<textR.length;i++,j++){
         if(textL[i]!==textR[j]){
-            console.log(textL[i]+" --> "+textR[j] + "  (Line: " + (i+1) + " )\n");
-            document.getElementById("diff").value += textL[i]+" --> "+textR[j] + "  (Line: " + (i+1) + " )\n"; 
+            console.log("Input: "+inputs[i] +"  "+textL[i]+" --> "+textR[j] + "  (Line: " + (i+1) + " )\n");
+            document.getElementById("diff").value += "Input: "+inputs[i] +" || Output: "+textL[i]+" --> "+textR[j] + "  (Line: " + (i+1) + " )\n"; 
         }
     }
 }

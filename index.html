@@ -5,14 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Difference_Finder</title>
     <script src="find.js"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <div>
     <h1>Find the Difference :</h1>
-    <textarea placeholder="text1" id="text1"></textarea>
-    <textarea placeholder="text2" name="text2"></textarea>
-    <span> = </span>
-    <textarea placeholder="Diference/(s)" id="diff"></textarea>
+    <label for="input">Input</label>
+    <textarea placeholder="Input here" id="input" class="input"></textarea>
+    <label for="text1">Expected Output:</label>
+    <textarea placeholder="text1" id="text1" class="input"></textarea>
+    <label>Actual Output: <textarea placeholder="text2" name="text2" class="input"></textarea></label>
+    <button id="findButton" onclick="tell()">Find!</button>
+    
     <hr>
-    <button onclick="tell()">Find!</button>
+    <div id="diffdiv">
+        <label for="diff">Difference :</label>
+        <textarea placeholder="Diference/(s)" id="diff"></textarea>
+    </div>
+    
+    </div>
 </body>
 </html>

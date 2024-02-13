@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(246, 247, 177);
+}
+
+.input{
+    height: 300px;
+    width: 300px;
+}
+
+#diff{
+    height: 300px;
+    width: 600px;
+}
+#diffdiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#findButton{
+    height: 40px;
+    width: 70px;
+}
